@@ -1,0 +1,2 @@
+- name: install sysfsutils package
+  yum: name=sysfsutils

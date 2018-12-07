@@ -1,0 +1,2 @@
+- name: start chronyd service
+  service: name=chronyd state=start enabled=yes

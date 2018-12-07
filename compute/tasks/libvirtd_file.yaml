@@ -1,0 +1,2 @@
+- name: copy libvirtd file
+  copy: src=libvirtd dest=/etc/sysconfig/libvirtd

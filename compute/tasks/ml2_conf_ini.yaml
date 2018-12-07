@@ -1,0 +1,2 @@
+- name: copy ml2_conf.ini file
+  copy: src=ml2_conf.ini dest=/etc/neutron/plugins/ml2/ml2_conf.ini

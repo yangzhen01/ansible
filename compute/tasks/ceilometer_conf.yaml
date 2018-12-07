@@ -1,0 +1,3 @@
+- name: copy template ceilometer.conf file
+  template: src=ceilometer.conf dest=/etc/ceilometer/ceilometer.conf
+  notify: restart ceilometer service

@@ -1,0 +1,2 @@
+- name: create ceph directory
+  shell: mkdir /etc/ceph

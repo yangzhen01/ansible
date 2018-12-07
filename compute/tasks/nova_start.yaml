@@ -1,0 +1,2 @@
+- name: start nova service
+  service: name=openstack-nova-compute state=started enable=yes

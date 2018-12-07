@@ -1,0 +1,2 @@
+- name: install openstack-nova-compute package
+  yum: name=openstack-nova-compute

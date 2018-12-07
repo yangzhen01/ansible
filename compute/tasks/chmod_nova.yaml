@@ -1,0 +1,3 @@
+- name: chmod file owner nova
+  shell: chown -R nova:nova /var/lib/nova/.ssh
+  notify: restart nova service

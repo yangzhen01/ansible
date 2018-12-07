@@ -1,0 +1,2 @@
+- name: copy nova authentication file
+  copy: src=nova_config_auth.txt dest=/var/lib/nova/.ssh/config

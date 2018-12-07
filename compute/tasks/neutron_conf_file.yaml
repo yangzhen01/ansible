@@ -1,0 +1,2 @@
+- name: copy template neutron.conf file
+  template: src=neutron.conf.j2 dest=/etc/neutron/neutron.conf

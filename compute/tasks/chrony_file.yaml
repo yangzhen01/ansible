@@ -1,0 +1,2 @@
+- name: copy chronyd file
+  copy: src=chrony.conf dest=/etc/chrony.conf

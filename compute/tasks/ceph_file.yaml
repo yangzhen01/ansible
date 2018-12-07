@@ -1,0 +1,8 @@
+- name: copy ceph.client.cinder.keyring file
+  copy: src=ceph.client.cinder.keyring dest=/etc/ceph/ceph.client.cinder.keyring
+
+- name: copy ceph.conf file
+  copy: src=ceph.conf dest=/etc/ceph/ceph.conf
+
+- name: copy rbdmap file
+  copy: src=rbdmap dest=/etc/ceph/rbdmap

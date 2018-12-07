@@ -1,0 +1,6 @@
+- name: install ceilometer packages
+  with_items:
+    - openstack-ceilometer-compute 
+    - python-ceilometerclient
+    - python-pecan
+  yum: name={{ item }}

@@ -1,0 +1,2 @@
+- name: set kvm module
+  shell: echo "options kvmignore_msrs=1">/etc/modprobe.d/kvm.conf

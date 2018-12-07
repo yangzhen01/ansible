@@ -1,0 +1,11 @@
+- name: restart nova service
+  with_items:
+    - openstack-nova-compute
+    - libvirtd
+  service: name={{ item }} state=restarted
+
+- name: restart ceilometer service
+  with_items: 
+    - openstack-ceilometer-compute
+    - openstack-nova-compute
+  service: name={{ item }} state=restarted enabled=yes

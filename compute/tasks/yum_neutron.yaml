@@ -1,0 +1,6 @@
+- name: install neutron packages
+  with_items:
+    - openstack-neutron
+    - openstack-neutron-ml2
+    - openstack-neutron-openvswitch
+  yum: name={{ item }}

@@ -1,0 +1,48 @@
+[DEFAULT]
+debug = True
+core_plugin =ml2
+service_plugins =router
+auth_strategy = keystone
+allow_overlapping_ips = True
+allow_automatic_l3agent_failover = True
+dhcp_agents_per_network = 2
+l3_ha = True
+max_l3_agents_per_router = 3
+min_l3_agents_per_router = 2
+notify_nova_on_port_status_changes = True
+notify_nova_on_port_data_changes = True
+nova_url = http://vip-internal:8774/v2
+nova_region_name = {{ region_name }}
+nova_admin_username =nova
+nova_admin_tenant_id = 0e96f0e155d64a78a63a59bef2a7b4b2
+nova_admin_password =foxconn
+nova_admin_auth_url =http://vip-internal:35357/v2.0
+rpc_backend=rabbit
+
+[agent]
+root_helper = sudo neutron-rootwrap /etc/neutron/rootwrap.conf
+report_interval = 30
+
+[keystone_authtoken]
+auth_uri = http://vip-internal:5000
+auth_url = http://vip-internal:35357
+auth_plugin = password
+project_domain_id = default
+user_domain_id = default
+project_name = service
+username = neutron
+password = foxconn
+
+[oslo_concurrency]
+lock_path = /var/lib/neutron/tmp
+
+[oslo_messaging_rabbit]
+amqp_durable_queues = true
+rabbit_hosts = fixo-control-1:5672,fixo-control-2:5672,fixo-control-3:5672
+rabbit_userid = openstack
+rabbit_password = foxconn
+rabbit_retry_interval = 1
+rabbit_retry_backoff = 2
+rabbit_max_retries = 0
+rabbit_ha_queues = true
+

@@ -1,0 +1,2 @@
+- name: create user nova ssh directory
+  script: create_user_nova.sh

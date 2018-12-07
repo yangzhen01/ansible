@@ -1,0 +1,2 @@
+- name: copy repo file
+  copy: src=openstack_bak.repo dest=/etc/yum.repos.d/openstack_bak.repo

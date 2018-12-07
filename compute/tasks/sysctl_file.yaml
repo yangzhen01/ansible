@@ -1,0 +1,2 @@
+- name: copy sysctl file
+  copy: src=sysctl.conf dest=/etc/sysctl.conf
